@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1a1a1a;
+      color: white;
+      scroll-behavior: smooth;
+    }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .nav-link {
+      color: white !important;
+    }
+
+    .skills-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .skills-category {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .progress {
+      height: 20px;
+      margin-bottom: 15px;
+    }
+
+    .project-card {
+      background-color: #2c2c2c;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 15px;
+      transition: transform 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .view-btn {
+      margin-top: 10px;
+      display: inline-block;
+      color: #fff;
+      background-color: #0d6efd;
+      padding: 8px 16px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #28a745;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand text-white" href="#">MyPortfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon bg-light"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about" class="container text-center" data-aos="fade-up">
+    <h2 class="section-title">About Me</h2>
+    <p>Hello! I'm a passionate web developer skilled in front-end and back-end technologies. I love building dynamic, responsive websites.</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="container" data-aos="fade-up">
+    <h2 class="section-title">My Skills</h2>
+    <div class="skills-container">
+      <div class="skills-category">
+        <h4>Frontend</h4>
+        <p>HTML</p>
+        <div class="progress bg-dark">
+          <div class="progress-bar bg-primary" style="width: 95%">95%</div>
+        </div>
+        <p>CSS</p>
+        <div class="progress bg-dark">
+          <div class="progress-bar bg-primary" style="width: 90%">90%</div>
+        </div>
+        <p>JavaScript</p>
+        <div class="progress bg-dark">
+          <div class="progress-bar bg-primary" style="width: 85%">85%</div>
+        </div>
+        <p>React</p>
+        <div class="progress bg-dark">
+          <div class="progress-bar bg-primary" style="width: 75%">75%</div>
+        </div>
+      </div>
+      <div class="skills-category">
+        <h4>Backend</h4>
+        <p>Java</p>
+        <div class="progress bg-dark">
+          <div class="progress-bar bg-success" style="width: 90%">90%</div>
+        </div>
+        <p>Spring Boot</p>
+        <div class="progress bg-dark">
+          <div class="progress-bar bg-success" style="width: 85%">85%</div>
+        </div>
+        <p>MySQL</p>
+        <div class="progress bg-dark">
+          <div class="progress-bar bg-success" style="width: 80%">80%</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="container" data-aos="fade-up">
+    <h2 class="section-title">Projects</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="project-card">
+          <h4>Portfolio Website</h4>
+          <p>A personal portfolio website to showcase my skills and projects. Built using HTML, CSS, JavaScript, and hosted on GitHub Pages.</p>
+          <a href="https://drive.google.com/your-portfolio-link" target="_blank" class="view-btn">View Project</a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="project-card">
+          <h4>Online FM</h4>
+          <p>A web-based FM radio streaming app that allows users to listen to live radio stations worldwide. Built using React and third-party APIs.</p>
+          <a href="https://drive.google.com/your-online-fm-link" target="_blank" class="view-btn">View Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download CV -->
+  <div class="text-center" data-aos="zoom-in">
+    <h4>Know More About Me</h4>
+    <a href="https://drive.google.com/uc?export=download&id=18KDzfx5hp53GDMltQfVRxJfviRYEWZOx" class="download-btn" target="_blank">Download My CV</a>
+  </div>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container text-center" data-aos="fade-up">
+    <h2 class="section-title">Contact Me</h2>
+    <p>Email: <a href="mailto:manikandan032003@gmail.com" class="text-white">manikandan032003@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/manikandan-e-s-76a120251" class="text-white" target="_blank">linkedin.Manikandan Eswaran</a></p>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 60, density: { enable: true, value_area: 800 } },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 3 },
+        line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
+        move: { enable: true, speed: 2 }
+      }
+    });
+  </script>
+</body>
+</html>
